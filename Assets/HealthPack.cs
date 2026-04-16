@@ -34,7 +34,7 @@ public class HealthPack : MonoBehaviour
        
 
     }
-
+    //Debug.Log(currentHealth)
 
     
     
