@@ -30,7 +30,7 @@ public class health : MonoBehaviour
 
     public void AddDamage(float damage)
     {
-        if (!invincibility)
+        if (!invincibility && damage > 0)
         {
             AllHealth -= damage;
             OnHealthChanged?.Invoke(AllHealth, damage);
@@ -47,6 +47,7 @@ public class health : MonoBehaviour
         if (damage < 0)
         {
             AllHealth -= damage;
+            OnHealthChanged?.Invoke(AllHealth, damage);
         }
     }
      IEnumerator ResetInvincibility(float resetTime)
