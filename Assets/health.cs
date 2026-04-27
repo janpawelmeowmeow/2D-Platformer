@@ -1,5 +1,7 @@
 using System.Collections;
+using UnityEditor.SceneManagement;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class health : MonoBehaviour
 {
@@ -36,12 +38,13 @@ public class health : MonoBehaviour
             OnHealthChanged?.Invoke(AllHealth, damage);
             //Debug.Log(AllHealth);
             invincibility = true;
-            StartCoroutine(ResetInvincibility(2));
+            StartCoroutine(ResetInvincibility(1));
 
 
             if (AllHealth <= 0)
             {
                 Destroy(this.gameObject);
+                SceneManager.LoadScene("EndGame");
             }
         }
         if (damage < 0)

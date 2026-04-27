@@ -9,7 +9,7 @@ public class PlayerMotor : MonoBehaviour
     public float stoppingForce = 10;
     public float maxSpeedX = 10;
     public float stoppingPoint = 0.1f;
-    public float jumpForce = 5;
+    public float jumpForce = 7;
     private Rigidbody2D rb;
     private bool _canJump = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
