@@ -19,7 +19,7 @@ public class CoinComponent : MonoBehaviour
 
 
 
-    void Awake()
+    void Start()
     {
         AddPoints(0);
        

@@ -10,7 +10,7 @@ public class UI_CoinsNumbers : MonoBehaviour
     public TextMeshProUGUI textComponent;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         Coin.CoinChanged += CoinChanged;
         Coin.CoinInitialized += CoinInitialized;
