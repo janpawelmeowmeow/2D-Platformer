@@ -33,6 +33,7 @@ public class PlayerMotor : MonoBehaviour
     // Update is called once per frame
     private void FixedUpdate()
     {
+        _animator.SetFloat("SpeedY", rb.linearVelocity.y);
         if (direction.x > 0)
         {
             transform.localScale = new Vector3(_initScale, transform.localScale.y, transform.localScale.z);
@@ -98,9 +99,11 @@ public class PlayerMotor : MonoBehaviour
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             currentJumps++;
+
             if (currentJumps >= maxJump) 
-            { 
-              _canJump = false;
+            {
+
+                _canJump = false;
             }
             
             //if (meow) then (meow);
@@ -138,6 +141,7 @@ public class PlayerMotor : MonoBehaviour
     {
         _canJump = true;
         currentJumps = 0;
+        
     }
 
     
