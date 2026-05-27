@@ -47,10 +47,11 @@ public class health : MonoBehaviour
                 SceneManager.LoadScene("EndGame");
             }
         }
-        if (damage < 0)
+        if (damage < 0 && AllHealth < maxHealth)
         {
             AllHealth -= damage;
             OnHealthChanged?.Invoke(AllHealth, damage);
+           
         }
     }
      IEnumerator ResetInvincibility(float resetTime)
